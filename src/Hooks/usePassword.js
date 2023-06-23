@@ -12,11 +12,6 @@ const usePassword = (passwordInfo) => {
   function createPassword () {
     const { lengthValue, lowerAmount, upperAmount, numAmount, SymAmount } = passwordInfo
     if (lengthValue === 0) return
-    if ((lowerAmount + upperAmount + numAmount + SymAmount) !== lengthValue) {
-      alert('password length and amount of characters are not the same')
-      return
-    }
-    if (lengthValue === 0) return
     const passwordArray = Array(Number(lengthValue)).fill('')
     if (lowerAmount > 0) {
       let lowLetNeeded = lowerAmount
@@ -62,11 +57,6 @@ const usePassword = (passwordInfo) => {
         }
       }
     }
-
-    // const passwordObject = {}
-    // for (const type in passwordInfo) {
-    //   if (type !== 'lengthValue' && passwordInfo[type] !== 0) passwordObject[type] = passwordInfo[type]
-    // }
 
     const passwordWord = passwordArray.join('')
     setPassword(passwordWord) // Last step
