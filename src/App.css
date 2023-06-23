@@ -173,10 +173,22 @@ input[type="range"]::-webkit-slider-thumb:active {
   box-shadow: 0 0 0 10px rgb(163, 255, 174,.1)
 }
 
+input[type='range']::-moz-range-thumb {
+  border: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  transition: .2s ease-in-out;
+  background: var(--text-white-soft);
+}
+
+input[type=range]:active::-moz-range-thumb{
+  box-shadow: 0 0 0 10px rgb(163, 255, 174,.1);
+}
+
 input[type="checkbox"]{
   -webkit-appearance: none;
   appearance: none;
-  /* user-select: none; */
   font: inherit;
   color: var(--text-white-soft);
   width: 1.15em;

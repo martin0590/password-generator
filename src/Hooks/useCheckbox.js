@@ -6,6 +6,7 @@ const useCheckbox = (initialValue = false) => {
 
   const handleCheckbBoxChange = (event) => {
     setIsChecked(event.target.checked)
+    if (!event.target.checked) setAmount(0)
   }
 
   const handleIncrement = (lengthValue) => {

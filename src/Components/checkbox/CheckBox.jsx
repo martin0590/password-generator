@@ -13,35 +13,36 @@ const CheckBox = ({ limitAmountChars, handlelimitAmountChars, message, isChecked
     handleDecrement()
   }
   return (
+    <div className='input-checkbox-container'>
+      <label>
+        <input
+          type="checkbox"
+          id="checkbox"
+          checked={isChecked}
+          onChange={(e) => {
+            handleCheckbBoxChange(e)
+            if (!e.target.checked) handlelimitAmountChars(prev => prev - amount)
+          }}/>
+          {message}
+      </label>
+      <span
+        className='length-number input-checkbox-amount'
+        style={{ scale: `${isChecked ? '1' : '0'}` }} >
+        {amount}
+      </span>
 
-  <div className='input-checkbox-container'>
-    <label>
-      <input
-        type="checkbox"
-        id="checkbox"
-        checked={isChecked}
-        onChange={(e) => handleCheckbBoxChange(e)}/>
-
-        {message}
-    </label>
-    <span
-      className='length-number input-checkbox-amount'
-      style={{ scale: `${isChecked ? '1' : '0'}` }} >
-      {amount}
-    </span>
-
-    <div
-      className='input-checkbox-control-amount'
-      style={{ scale: `${isChecked ? '1' : '0'}` }} >
-      <button
-        onClick={handleIncrements} >
-        +
-      </button>
-      <button onClick={handleDecrements} >
-        -
-      </button>
+      <div
+        className='input-checkbox-control-amount'
+        style={{ scale: `${isChecked ? '1' : '0'}` }} >
+        <button
+          onClick={handleIncrements} >
+          +
+        </button>
+        <button onClick={handleDecrements} >
+          -
+        </button>
+      </div>
     </div>
-  </div>
 
   )
 }
