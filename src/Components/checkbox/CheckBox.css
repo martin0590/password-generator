@@ -1,0 +1,29 @@
+.input-checkbox-container{
+  display: flex;
+  position: relative;
+}
+
+.input-checkbox-amount{
+  margin-left: auto;
+  transition: scale .12s ease-in-out;
+  transform-origin: bottom left;
+}
+
+.input-checkbox-control-amount{
+  display: flex;
+  gap: .4rem;
+  position: absolute;
+  right: -70px;
+  background: hsl(248, 10%, 15%);
+  top: -2px;
+  transition: scale .12s;
+  transform-origin: bottom left;
+}
+
+.input-checkbox-control-amount button{
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
