@@ -1,6 +1,9 @@
 .input-checkbox-container{
   display: flex;
   position: relative;
+  gap: .3rem;
+  align-items: center;
+  width: 20rem;
 }
 
 .input-checkbox-amount{
@@ -12,10 +15,7 @@
 .input-checkbox-control-amount{
   display: flex;
   gap: .4rem;
-  position: absolute;
-  right: -70px;
   background: hsl(248, 10%, 15%);
-  top: -2px;
   transition: scale .12s;
   transform-origin: bottom left;
 }
@@ -26,4 +26,45 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 480px) {
+  .input-checkbox-amount{
+    margin-left: auto;
+    transition: scale .12s ease-in-out;
+    transform-origin: bottom left;
+  }
+
+  .input-checkbox-control-amount{
+    display: flex;
+    gap: .4rem;
+    right: -65px;
+    position: absolute;
+    background: hsl(248, 10%, 15%);
+    top: -2px;
+    transition: scale .12s;
+    transform-origin: bottom left;
+  }
+
+  .input-checkbox-control-amount button{
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .input-checkbox-container{
+    width: 100%;
+  }
+
+  .input-checkbox-control-amount{
+    right: -68px;
+    gap: .5rem;
+    
+  }
 }

@@ -25,6 +25,7 @@ const CheckBox = ({ limitAmountChars, handlelimitAmountChars, message, isChecked
           }}/>
           {message}
       </label>
+
       <span
         className='length-number input-checkbox-amount'
         style={{ scale: `${isChecked ? '1' : '0'}` }} >
@@ -42,6 +43,7 @@ const CheckBox = ({ limitAmountChars, handlelimitAmountChars, message, isChecked
           -
         </button>
       </div>
+
     </div>
 
   )

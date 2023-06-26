@@ -11,7 +11,6 @@
 .main__app{
     color: var(--text-white-soft);
     font-family: 'Dosis', sans-serif;
-    width: 28rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -29,7 +28,7 @@
     flex-direction: column;
 }
 
-.main-content__copy{    
+.main-content__copy{
 background-color: var(--component-violet-soft);
 display: flex;
 justify-content: space-between;
@@ -216,4 +215,29 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   transform: scale(1);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 375px){
+  .main-content__copy span{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content__copy span{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main__app{
+    width: 28rem
+  }
+
+  .input-checkbox-control-amount{
+    right: -60px;
+    gap: .2rem;
+  }
 }
