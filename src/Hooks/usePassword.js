@@ -12,6 +12,8 @@ const usePassword = (passwordInfo) => {
   function createPassword () {
     const { lengthValue, lowerAmount, upperAmount, numAmount, SymAmount } = passwordInfo
     if (lengthValue === 0) return
+    const fullAmount = lowerAmount + upperAmount + numAmount + SymAmount
+    if (fullAmount > lengthValue) return
     const passwordArray = Array(Number(lengthValue)).fill('')
     if (lowerAmount > 0) {
       let lowLetNeeded = lowerAmount
